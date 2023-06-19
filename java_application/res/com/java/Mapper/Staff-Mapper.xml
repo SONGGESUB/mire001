@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Staff-Mapper">
+	<select id="selectStaffList" resultType="staff">
+		select *
+		from staff_view
+	</select>
+	<select id="selectStaffByStaffNum" parameterType="str"
+		resultType="staff">
+		select *
+		from staff_view
+		where staffNum = #{staffNum}
+	</select>
+
+	<select id="insertStaff" parameterType="staff">
+		insert into
+		staff(staffNum, name, pwd, phone, position, state)
+		values (#{staffNum},
+		#{name}, #{pwd}, #{phone}, #{position}, #{state})
+	</select>
+	<select id="updateStaff" parameterType="staff">
+		update staff
+		set name =
+		#{name}, pwd = #{pwd}, phone = #{phone}, position =
+		#{position}, state
+		= #{state}
+		where staffNum = #{staffNum}
+	</select>
+	<select id="deleteStaff" parameterType="staff">
+		delete
+		from staff
+		where
+		staffNum = #{staffNum}
+	</select>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Student-Mapper">
+	<select id="slelctStudentList" resultType="student">
+		select *
+		from student_view
+	</select>
+	<select id="selectStudentByStuNum" parameterType="str"
+		resultType="student">
+		select *
+		from student_view
+		where stuNum = #{stuNum}
+	</select>
+
+	<insert id="insertStudent" parameterType="student">
+		insert into student(stuNum, name, phone, pwd, entDate, register, state)
+		values (#{stuNum}, #{name}, #{phone}, #{pwd}, #{entDate}, #{register},
+		#{state})
+	</insert>
+	<update id="updateStudent" parameterType="student">
+		update student
+		set name = #{name}, phone = #{phone}, pwd = #{pwd}, entDate = #{entDate},
+		register = #{register}, state = #{state}
+		where stuNum = #{stuNum}
+	</update>
+	<delete id="deleteStudent" parameterType="student">
+		delete
+		from student
+		where stuNum = #{stuNum}
+	</delete>
+</mapper>
