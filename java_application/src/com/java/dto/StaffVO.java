@@ -1,4 +1,4 @@
-package java_git;
+package com.java.dto;
 public class StaffVO implements Comparable<StaffVO>{
 	
 	private String staffNum;

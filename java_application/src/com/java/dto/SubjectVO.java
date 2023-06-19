@@ -1,9 +1,62 @@
-package java_git;
+package com.java.dto;
 
 public class SubjectVO {
 
-	public SubjectVO() {
-		// TODO Auto-generated constructor stub
+	private String subNum;
+	private String subname;
+	private String teacher;
+	private int entNum;
+	private String state;
+	private String clazz;
+	private int grade;
+	private int term;
+	
+	public String getSubNum() {
+		return subNum;
 	}
-
+	public void setSubNum(String subNum) {
+		this.subNum = subNum;
+	}
+	public String getSubname() {
+		return subname;
+	}
+	public void setSubname(String subname) {
+		this.subname = subname;
+	}
+	public String getTeacher() {
+		return teacher;
+	}
+	public void setTeacher(String teacher) {
+		this.teacher = teacher;
+	}
+	public int getEntNum() {
+		return entNum;
+	}
+	public void setEntNum(int entNum) {
+		this.entNum = entNum;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getClazz() {
+		return clazz;
+	}
+	public void setClazz(String clazz) {
+		this.clazz = clazz;
+	}
+	public int getGrade() {
+		return grade;
+	}
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+	public int getTerm() {
+		return term;
+	}
+	public void setTerm(int term) {
+		this.term = term;
+	}
 }

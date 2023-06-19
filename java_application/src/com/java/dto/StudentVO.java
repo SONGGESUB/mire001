@@ -1,4 +1,4 @@
-package java_git;
+package com.java.dto;
 
 import java.util.Date;
 
